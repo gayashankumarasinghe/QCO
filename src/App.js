@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+//import Qcocomponents from './components/Qcocomponents/Qcocomponents';
+import Qcocomponent from './components/Qcocomponent/Qcocomponent';
 
-function App() {
+class App extends Component {
+  state = {
+    qcocomponents : [
+      {moduleNumber:'10',styleNumber:'11156237',numberOfMachinesFromBelt:'2',numberOfCheckedMachines:'2',numberOfSetMachines:'1'},
+      {moduleNumber:'20',styleNumber:'P3303',numberOfMachinesFromBelt:'5',numberOfCheckedMachines:'2',numberOfSetMachines:'3'},
+      {moduleNumber:'34',styleNumber:'11170854',numberOfMachinesFromBelt:'8',numberOfCheckedMachines:'2',numberOfSetMachines:'5'},
+    ]
+  };
+  
+  render(){
+    let qco = null;
+    qco = (
+      <div>
+        {this.state.qcocomponents.map(qcocomponent=>{
+          return <Qcocomponent 
+          moduleNumber ={qcocomponent.moduleNumber}
+          styleNumber = {qcocomponent.styleNumber}
+          numberOfMachinesFromBelt ={qcocomponent.numberOfMachinesFromBelt}
+          numberOfCheckedMachines = {qcocomponent.numberOfCheckedMachines}
+          numberOfSetMachines = {qcocomponent.numberOfSetMachines}
+
+          />
+        })}
+      </div>
+    );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {qco}
     </div>
   );
+  }
 }
 
 export default App;
