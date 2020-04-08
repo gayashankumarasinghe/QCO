@@ -7,19 +7,20 @@ const Qcocomponent = (props) =>{
                     <div>
                         {/* <p>Planned time:{''}</p> */}
                     </div>
-                    <div>
-                        <label>Style number: <strong>{props.styleNumber}</strong></label>
-                        <label>Module number:<strong>ST {props.moduleNumber}</strong></label>
-                        <br/>
-                        <label>Number of machines from belt: <strong>{props.numberOfMachinesFromBelt}</strong></label>
+                    <div className="QCBasic">
+                        <label>Style number: </label><span><strong>{props.styleNumber}</strong></span>
+                        <label>Module number: </label><span><strong>ST {props.moduleNumber}</strong></span>
+                        <label>Number of machines from belt: </label><span><strong>{props.numberOfMachinesFromBelt}</strong></span>
                     </div>
-                    <br></br>
-                    <div>
+                    <div className="QCVary">
                         <p>Number of machines set by the mechanic: <strong>{props.numberOfSetMachines}</strong></p>
                         <p>Number of machines checked by the GL: <strong>{props.numberOfCheckedMachines}</strong></p>
                     </div>
-                    <label>QCO cut status</label>
-                    <label>QCO pack status</label>
+                    <div className="QCStatus">
+                        <label>QCO cut status : </label><span>Some input</span>
+                        <label>QCO pack status : </label><span>Some input</span>
+                    </div>
+
                 </div>
         );
     }

@@ -1,11 +1,33 @@
 .Qcocomponent{
-    background-color: #e9e8e8 ;
+    background-color: #201c29 ;
     font-size: large ;
     width: 25%;
-    margin: 16px auto;
-    border: 1px solid rgb(221, 44, 44);
-    box-shadow: 0 2px 3px #ccc;
-    padding: 16px;
+    margin: 2%;
+    /* border: 1px solid rgb(221, 44, 44); */
+    /* box-shadow: 0 2px 3px #ccc; */
+    padding: 10px;
     text-align: left;
     float: left;
     }
+
+.QCBasic{
+    background-color: #b130c2 ;
+    margin: 2%;
+    padding : 10px;
+    z-index : 9999;
+}
+
+.QCVary{
+    background-color: #0d10b4 ;
+    margin: 2%;
+    padding : 10px;
+    z-index : 9999;
+}
+
+.QCStatus{
+    display: inline-block;
+    background-color: #0deb3d ;
+    margin: 2%;
+    padding : 10px;
+    z-index : 9999;
+}
